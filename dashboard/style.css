@@ -1,0 +1,327 @@
+header {
+    background-color: var(--bg-sidebar);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow-md);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header h2 {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+header .user-info {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header .logout-btn {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.4rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.8rem;
+    color: white;
+}
+
+header .logout-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.horizontal-form {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 1fr 1fr auto;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.horizontal-form button {
+    width: auto;
+    height: 42px;
+    padding: 0 1.5rem;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.error-message {
+    position: absolute;
+    left: 0;
+    bottom: -18px;
+    font-size: 0.7rem !important;
+    white-space: nowrap;
+    color: var(--danger);
+    font-weight: 500;
+    display: none;
+}
+
+.form-group .error-message {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    font-size: 0.8rem !important;
+    margin-top: 0.25rem;
+    display: none;
+}
+
+.input-error {
+    border-color: var(--danger) !important;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1) !important;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+}
+
+th {
+    background-color: var(--bg-body);
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 2px solid var(--border);
+}
+
+td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-main);
+    font-size: 0.95rem;
+    vertical-align: middle;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:not(.total-row):hover td {
+    background-color: #fcfaf8;
+}
+
+tfoot tr.total-row td,
+tfoot tr.total-row:hover td {
+    background-color: var(--secondary) !important;
+    color: #ffffff !important;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.status-pill {
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.status-active {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.status-pending {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.status-suspended {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.auth-body {
+    background-color: var(--bg-sidebar);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: radial-gradient(circle at top right, #334155 0%, #1e293b 100%);
+}
+
+.auth-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    max-width: 400px;
+}
+
+.action-link {
+    font-weight: 500;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.85rem;
+}
+
+.action-link:hover {
+    background: #f1f5f9;
+}
+
+.category-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.category-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-main);
+}
+
+.category-list li:last-child {
+    border-bottom: none;
+}
+
+.btn-sm-danger {
+    background: none;
+    color: var(--danger);
+    padding: 0;
+    width: auto;
+    box-shadow: none;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.btn-sm-danger:hover {
+    background: none;
+    color: #b91c1c;
+    transform: scale(1.1);
+    box-shadow: none;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: var(--bg-card);
+    margin: auto;
+    padding: 2rem;
+    border: 1px solid var(--border);
+    width: 90%;
+    max-width: 500px;
+    border-radius: var(--radius);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    position: relative;
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close-modal {
+    color: var(--text-muted);
+    float: right;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    line-height: 1;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: var(--text-main);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button.edit-btn {
+    width: auto;
+    display: inline-block;
+    background: transparent;
+    color: var(--accent);
+    border: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    box-shadow: none;
+    margin: 0;
+    transform: none;
+    line-height: inherit;
+}
+
+button.edit-btn:hover {
+    background: #f1f5f9;
+    transform: none;
+    box-shadow: none;
+    text-decoration: none;
+    color: #2563eb;
+}
+
+@media (max-width: 1024px) {
+    .horizontal-form {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .horizontal-form button {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 640px) {
+    .horizontal-form {
+        grid-template-columns: 1fr;
+    }
+
+    .horizontal-form button {
+        grid-column: span 1;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}
